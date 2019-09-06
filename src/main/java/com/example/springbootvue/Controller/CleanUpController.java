@@ -1,6 +1,5 @@
 package com.example.springbootvue.Controller;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -8,9 +7,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Collection;
+import java.util.Date;
 import java.util.stream.Collectors;
-
-import javax.validation.constraints.Null;
 
 import com.example.springbootvue.Entity.*;
 import com.example.springbootvue.Repository.*;
@@ -54,6 +52,7 @@ public class CleanUpController{
         newCleanUp.setDayClean(dayClean);
         newCleanUp.setTypeTime(typeTime);
         newCleanUp.setNote(note);
+        newCleanUp.setCleanupDate(new Date());
 
         return cleanUpRepository.save(newCleanUp);
     }
