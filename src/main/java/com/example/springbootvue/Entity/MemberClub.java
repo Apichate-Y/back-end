@@ -11,7 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
 import java.util.Collection;
-import java.util.Date;
+//import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -33,9 +33,15 @@ public class MemberClub {
     @Column(name = "MEMBER_CLUB_ID", unique = true, nullable = true)
 
     private @NonNull Long id;
+    private @NonNull String username;
+    private @NonNull String password;
 
-    @Column(name = "REGISTER_DATE")
-    private @NonNull Date registerDate;
+    /*@Column(name = "REGISTER_DATE")
+    private @NonNull Date registerDate;*/
+
+    private @NonNull String board;
+    private @NonNull String position_club;
+    private @NonNull String user;
 
     @OneToMany(fetch = FetchType.EAGER)
     private Collection<CleanUp> clean;

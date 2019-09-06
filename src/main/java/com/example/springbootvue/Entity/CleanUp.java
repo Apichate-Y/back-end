@@ -7,7 +7,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-
+import javax.validation.constraints.Null;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
@@ -36,6 +36,8 @@ public class CleanUp {
 
   @Column(name = "CLEANUP_DATE")
   private @NonNull Date cleanupDate;
+
+  private String note;
 
   @ManyToOne(fetch = FetchType.EAGER, targetEntity = DayClean.class)
   @JoinColumn(name = "DAY_ID", insertable = true)
