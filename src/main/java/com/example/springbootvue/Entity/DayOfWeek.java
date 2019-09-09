@@ -23,13 +23,13 @@ import javax.persistence.FetchType;
 @NoArgsConstructor
 @ToString
 @EqualsAndHashCode
-@Table(name = "DAY_CLEAN")
-public class DayClean {
+@Table(name = "DAY_OF_WEEK")
+public class DayOfWeek {
 
   @Id
-  @SequenceGenerator(name = "DAY_SEQ", sequenceName = "DAY_SEQ")
-  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "DAY_SEQ")
-  @Column(name = "DAY_ID", unique = true, nullable = true)
+  @SequenceGenerator(name = "DAY_OF_WEEK_SEQ", sequenceName = "DAY_OF_WEEK_SEQ")
+  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "DAY_OF_WEEK_SEQ")
+  @Column(name = "DAY_OF_WEEK_ID", unique = true, nullable = true)
 
   private @NonNull Long id;
 

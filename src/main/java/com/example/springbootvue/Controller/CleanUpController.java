@@ -22,11 +22,11 @@ public class CleanUpController{
     @Autowired
     private final CleanUpRepository cleanUpRepository;
     @Autowired
-    private DayRepository dayRepository;
+    private DayOfWeekRepository dayOfWeekRepository;
     @Autowired
-    private MemberClubRepository memberClubRepository;
+    private ClubMemberRepository clubMemberRepository;
     @Autowired
-    private TypeTimeRepository typeTimeRepository;
+    private TimeOfDayRepository timeOfDayRepository;
 
     CleanUpController(CleanUpRepository cleanUpRepository) {
         this.cleanUpRepository = cleanUpRepository;
@@ -37,20 +37,20 @@ public class CleanUpController{
         return cleanUpRepository.findAll().stream().collect(Collectors.toList());
     }
 
-    @PostMapping("/cleanup/{memberclub_id}/{dayclean_id}/{typetime_id}/{note}")
+    @PostMapping("/cleanup/{clubmember_id}/{dayofweek_id}/{timeofday_id}/{note}")
     public CleanUp newCleanUp(CleanUp newCleanUp,
-    @PathVariable long memberclub_id,
-    @PathVariable long dayclean_id,
-    @PathVariable long typetime_id,
+    @PathVariable long clubmember_id,
+    @PathVariable long dayofweek_id,
+    @PathVariable long timeofday_id,
     @PathVariable String note){
         
-        MemberClub memberClub = memberClubRepository.findById(memberclub_id);
-        DayClean dayClean = dayRepository.findById(dayclean_id);
-        TypeTime typeTime = typeTimeRepository.findById(typetime_id);
+        ClubMember clubMember = clubMemberRepository.findById(clubmember_id);
+        DayOfWeek dayOfWeek = dayOfWeekRepository.findById(dayofweek_id);
+        TimeOfDay timeOfDay = timeOfDayRepository.findById(timeofday_id);
 
-        newCleanUp.setMemberClub(memberClub);
-        newCleanUp.setDayClean(dayClean);
-        newCleanUp.setTypeTime(typeTime);
+        newCleanUp.setClubMember(clubMember);
+        newCleanUp.setDayOfWeek(dayOfWeek);
+        newCleanUp.setTimeOfDay(timeOfDay);
         newCleanUp.setNote(note);
         newCleanUp.setCleanupDate(new Date());
 

@@ -2,12 +2,12 @@ package com.example.springbootvue;
 
 import java.util.stream.Stream;
 
-import com.example.springbootvue.Entity.DayClean;
-import com.example.springbootvue.Entity.TypeTime;
-import com.example.springbootvue.Entity.MemberClub;
-import com.example.springbootvue.Repository.DayRepository;
-import com.example.springbootvue.Repository.TypeTimeRepository;
-import com.example.springbootvue.Repository.MemberClubRepository;
+import com.example.springbootvue.Entity.DayOfWeek;
+import com.example.springbootvue.Entity.TimeOfDay;
+import com.example.springbootvue.Entity.ClubMember;
+import com.example.springbootvue.Repository.DayOfWeekRepository;
+import com.example.springbootvue.Repository.TimeOfDayRepository;
+import com.example.springbootvue.Repository.ClubMemberRepository;
 
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
@@ -22,71 +22,71 @@ public class SpringBootVueApplication {
 	}
 
 	@Bean
-	ApplicationRunner init(DayRepository dayRepository, TypeTimeRepository typetimeRepository, MemberClubRepository memberClubRepository) {
+	ApplicationRunner init(DayOfWeekRepository dayOfWeekRepository, TimeOfDayRepository timeOfDayRepository, ClubMemberRepository clubMemberRepository) {
 		return args -> {
 			Stream.of("จันทร์", "อังคาร", "พุธ", "พฤหัสบดี", "ศุกร์").forEach(days -> {
-				DayClean day = new DayClean();
+				DayOfWeek day = new DayOfWeek();
 				day.setDay(days);
-				dayRepository.save(day);
+				dayOfWeekRepository.save(day);
 			});
 
-			Stream.of("เช้า", "บ่าย", "เย็น").forEach(timetype -> {
-				TypeTime typeTime = new TypeTime();
-				typeTime.setTimetype(timetype);
-				typetimeRepository.save(typeTime);
+			Stream.of("เช้า", "บ่าย", "เย็น").forEach(timeofd -> {
+				TimeOfDay timeofDay = new TimeOfDay();
+				timeofDay.setTimetype(timeofd);
+				timeOfDayRepository.save(timeofDay);
 			});
 
-			MemberClub memberClub1 = new MemberClub();
-			memberClub1.setBoard("ชมรมคอมพิวเตอร์");
-			memberClub1.setUsername("Apichate");
-			memberClub1.setPassword("123456");
-			memberClub1.setUser("อภิเชษฐ์");
-			memberClub1.setPosition_club("กรรมการ");
-			memberClubRepository.save(memberClub1);
+			ClubMember clubMember1 = new ClubMember();
+			clubMember1.setBoard("ชมรมคอมพิวเตอร์");
+			clubMember1.setUsername("Apichate");
+			clubMember1.setPassword("123456");
+			clubMember1.setUser("อภิเชษฐ์");
+			clubMember1.setPosition_club("กรรมการ");
+			clubMemberRepository.save(clubMember1);
 
-			MemberClub memberClub2 = new MemberClub();
-			memberClub2.setBoard("ชมรมคอมพิวเตอร์");
-			memberClub2.setUsername("Noparat");
-			memberClub2.setPassword("123456");
-			memberClub2.setUser("นพรัตน์");
-			memberClub2.setPosition_club("กรรมการ");
-			memberClubRepository.save(memberClub2);
+			ClubMember clubMember2 = new ClubMember();
+			clubMember2.setBoard("ชมรมคอมพิวเตอร์");
+			clubMember2.setUsername("Noparat");
+			clubMember2.setPassword("123456");
+			clubMember2.setUser("นพรัตน์");
+			clubMember2.setPosition_club("กรรมการ");
+			clubMemberRepository.save(clubMember2);
 
-			MemberClub memberClub3 = new MemberClub();
-			memberClub3.setBoard("ชมรมคอมพิวเตอร์");
-			memberClub3.setUsername("Eatrnny");
-			memberClub3.setPassword("123456");
-			memberClub3.setUser("วิทวัส");
-			memberClub3.setPosition_club("กรรมการ");
-			memberClubRepository.save(memberClub3);
+			ClubMember clubMember3 = new ClubMember();
+			clubMember3.setBoard("ชมรมคอมพิวเตอร์");
+			clubMember3.setUsername("Eatrnny");
+			clubMember3.setPassword("123456");
+			clubMember3.setUser("วิทวัส");
+			clubMember3.setPosition_club("กรรมการ");
+			clubMemberRepository.save(clubMember3);
 
-			MemberClub memberClub4 = new MemberClub();
-			memberClub4.setBoard("ชมรมคอมพิวเตอร์");
-			memberClub4.setUsername("Mayka2727");
-			memberClub4.setPassword("123456");
-			memberClub4.setUser("กนกพร");
-			memberClub4.setPosition_club("กรรมการ");
-			memberClubRepository.save(memberClub4);
+			ClubMember clubMember4 = new ClubMember();
+			clubMember4.setBoard("ชมรมคอมพิวเตอร์");
+			clubMember4.setUsername("Mayka2727");
+			clubMember4.setPassword("123456");
+			clubMember4.setUser("กนกพร");
+			clubMember4.setPosition_club("กรรมการ");
+			clubMemberRepository.save(clubMember4);
 
-			MemberClub memberClub5 = new MemberClub();
-			memberClub5.setBoard("ชมรมคอมพิวเตอร์");
-			memberClub5.setUsername("Jirawan");
-			memberClub5.setPassword("123456");
-			memberClub5.setUser("จิรวรรณ");
-			memberClub5.setPosition_club("กรรมการ");
-			memberClubRepository.save(memberClub5);
+			ClubMember clubMember5 = new ClubMember();
+			clubMember5.setBoard("ชมรมคอมพิวเตอร์");
+			clubMember5.setUsername("Jirawan");
+			clubMember5.setPassword("123456");
+			clubMember5.setUser("จิรวรรณ");
+			clubMember5.setPosition_club("กรรมการ");
+			clubMemberRepository.save(clubMember5);
 
-			MemberClub memberClub6 = new MemberClub();
-			memberClub6.setBoard("ชมรมคอมพิวเตอร์");
-			memberClub6.setUsername("Rak160");
-			memberClub6.setPassword("123456");
-			memberClub6.setUser("ศิริลักษณ์");
-			memberClub6.setPosition_club("กรรมการ");
-			memberClubRepository.save(memberClub6);
+			ClubMember clubMember6 = new ClubMember();
+			clubMember6.setBoard("ชมรมคอมพิวเตอร์");
+			clubMember6.setUsername("Rak160");
+			clubMember6.setPassword("123456");
+			clubMember6.setUser("ศิริลักษณ์");
+			clubMember6.setPosition_club("กรรมการ");
+			clubMemberRepository.save(clubMember6);
 
-			dayRepository.findAll().forEach(System.out::println);
-			typetimeRepository.findAll().forEach(System.out::println);
-			memberClubRepository.findAll().forEach(System.out::println);
+			dayOfWeekRepository.findAll().forEach(System.out::println);
+			timeOfDayRepository.findAll().forEach(System.out::println);
+			clubMemberRepository.findAll().forEach(System.out::println);
 		};
 	}
 }

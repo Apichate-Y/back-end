@@ -22,13 +22,13 @@ import javax.persistence.FetchType;
 @NoArgsConstructor
 @ToString
 @EqualsAndHashCode
-@Table(name = "TYPE_TIME")
-public class TypeTime {
+@Table(name = "TIME_OF_DAY")
+public class TimeOfDay {
 
   @Id
-  @SequenceGenerator(name = "TYPE_TIME_SEQ", sequenceName = "TYPE_TIME_SEQ")
-  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "TYPE_TIME_SEQ")
-  @Column(name = "TYPE_TIME_ID", unique = true, nullable = true)
+  @SequenceGenerator(name = "TIME_OF_DAY_SEQ", sequenceName = "TIME_OF_DAY_SEQ")
+  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "TIME_OF_DAY_SEQ")
+  @Column(name = "TIME_OF_DAY_ID", unique = true, nullable = true)
 
   private @NonNull Long id;
 

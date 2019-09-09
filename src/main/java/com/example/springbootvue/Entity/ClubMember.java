@@ -24,13 +24,13 @@ import javax.persistence.FetchType;
 @NoArgsConstructor
 @ToString
 @EqualsAndHashCode
-@Table(name = "MEMBER_CLUB")
-public class MemberClub {
+@Table(name = "CLUB_MEMBER")
+public class ClubMember {
 
     @Id
-    @SequenceGenerator(name = "MEMBER_CLUB_SEQ", sequenceName = "MEMBER_CLUB_SEQ")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "MEMBER_CLUB_SEQ")
-    @Column(name = "MEMBER_CLUB_ID", unique = true, nullable = true)
+    @SequenceGenerator(name = "CLUB_MEMBER_SEQ", sequenceName = "CLUB_MEMBER_SEQ")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CLUB_MEMBER_SEQ")
+    @Column(name = "CLUB_MEMBER_ID", unique = true, nullable = true)
 
     private @NonNull Long id;
     private @NonNull String username;

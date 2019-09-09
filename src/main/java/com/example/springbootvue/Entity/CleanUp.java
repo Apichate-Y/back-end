@@ -7,7 +7,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.validation.constraints.Null;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
@@ -37,18 +36,18 @@ public class CleanUp {
   @Column(name = "CLEANUP_DATE")
   private @NonNull Date cleanupDate;
 
-  private String note;
+  private @NonNull String note;
 
-  @ManyToOne(fetch = FetchType.EAGER, targetEntity = DayClean.class)
+  @ManyToOne(fetch = FetchType.EAGER, targetEntity = DayOfWeek.class)
   @JoinColumn(name = "DAY_ID", insertable = true)
-  private DayClean dayClean;
+  private DayOfWeek dayOfWeek;
 
-  @ManyToOne(fetch = FetchType.EAGER, targetEntity = TypeTime.class)
+  @ManyToOne(fetch = FetchType.EAGER, targetEntity = TimeOfDay.class)
   @JoinColumn(name = "TYPE_TIME_ID", insertable = true)
-  private TypeTime typeTime;
+  private TimeOfDay timeOfDay;
 
-  @ManyToOne(fetch = FetchType.EAGER, targetEntity = MemberClub.class)
+  @ManyToOne(fetch = FetchType.EAGER, targetEntity = ClubMember.class)
   @JoinColumn(name = "MEMBER_CLUB_ID", insertable = true)
-  private MemberClub memberClub;
+  private ClubMember clubMember;
 
 }
