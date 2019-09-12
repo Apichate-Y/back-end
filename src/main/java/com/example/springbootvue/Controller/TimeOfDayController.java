@@ -13,17 +13,17 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 @CrossOrigin(origins = "http://localhost:8080")
 @RestController
-public class TypeTimeController{
+public class TimeOfDayController{
 
     @Autowired
     private final TimeOfDayRepository timeOfDayRepository;
 
-    public TypeTimeController(TimeOfDayRepository timeofDayRepository){
+    public TimeOfDayController(TimeOfDayRepository timeofDayRepository){
         this.timeOfDayRepository = timeofDayRepository;
     }
 
     @GetMapping("/timeofday")
-    public Collection<TimeOfDay> TimeofDays(){
+    public Collection<TimeOfDay> TimeOfDays(){
         return timeOfDayRepository.findAll().stream().collect(Collectors.toList());
     }
 

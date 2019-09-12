@@ -40,7 +40,7 @@ public class SpringBootVueApplication {
 			clubMember1.setBoard("ชมรมคอมพิวเตอร์");
 			clubMember1.setUsername("Apichate");
 			clubMember1.setPassword("123456");
-			clubMember1.setUser("อภิเชษฐ์");
+			clubMember1.setUser("B5917099");
 			clubMember1.setPosition_club("กรรมการ");
 			clubMemberRepository.save(clubMember1);
 
@@ -48,7 +48,7 @@ public class SpringBootVueApplication {
 			clubMember2.setBoard("ชมรมคอมพิวเตอร์");
 			clubMember2.setUsername("Noparat");
 			clubMember2.setPassword("123456");
-			clubMember2.setUser("นพรัตน์");
+			clubMember2.setUser("B5917440");
 			clubMember2.setPosition_club("กรรมการ");
 			clubMemberRepository.save(clubMember2);
 
@@ -56,7 +56,7 @@ public class SpringBootVueApplication {
 			clubMember3.setBoard("ชมรมคอมพิวเตอร์");
 			clubMember3.setUsername("Eatrnny");
 			clubMember3.setPassword("123456");
-			clubMember3.setUser("วิทวัส");
+			clubMember3.setUser("B6001025");
 			clubMember3.setPosition_club("กรรมการ");
 			clubMemberRepository.save(clubMember3);
 
@@ -64,7 +64,7 @@ public class SpringBootVueApplication {
 			clubMember4.setBoard("ชมรมคอมพิวเตอร์");
 			clubMember4.setUsername("Mayka2727");
 			clubMember4.setPassword("123456");
-			clubMember4.setUser("กนกพร");
+			clubMember4.setUser("B6005900");
 			clubMember4.setPosition_club("กรรมการ");
 			clubMemberRepository.save(clubMember4);
 
@@ -72,7 +72,7 @@ public class SpringBootVueApplication {
 			clubMember5.setBoard("ชมรมคอมพิวเตอร์");
 			clubMember5.setUsername("Jirawan");
 			clubMember5.setPassword("123456");
-			clubMember5.setUser("จิรวรรณ");
+			clubMember5.setUser("B6005924");
 			clubMember5.setPosition_club("กรรมการ");
 			clubMemberRepository.save(clubMember5);
 
@@ -80,7 +80,7 @@ public class SpringBootVueApplication {
 			clubMember6.setBoard("ชมรมคอมพิวเตอร์");
 			clubMember6.setUsername("Rak160");
 			clubMember6.setPassword("123456");
-			clubMember6.setUser("ศิริลักษณ์");
+			clubMember6.setUser("B6010256");
 			clubMember6.setPosition_club("กรรมการ");
 			clubMemberRepository.save(clubMember6);
 
